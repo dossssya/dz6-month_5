@@ -1,6 +1,10 @@
-import { createStore } from 'redux';
-import counterReducer from './reducer';
+import { configureStore } from "@reduxjs/toolkit";
+import calculatorReducer from "./calculatorSlice";
 
-const store = createStore(counterReducer);
+const store = configureStore({
+    reducer: {
+        calculator: calculatorReducer,
+    },
+});
 
 export default store;
