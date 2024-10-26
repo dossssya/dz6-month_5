@@ -1,10 +1,7 @@
-import { configureStore } from "@reduxjs/toolkit";
-import calculatorReducer from "./calculatorSlice";
+import { createStore, applyMiddleware } from 'redux';
+import { thunk } from 'redux-thunk';
+import rootReducer from './reducers/';
 
-const store = configureStore({
-    reducer: {
-        calculator: calculatorReducer,
-    },
-});
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;
