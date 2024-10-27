@@ -1,20 +1,14 @@
-// src/App.js
 import React from 'react';
-import { Provider } from 'react-redux';
-import store from './redux/store';
-import FactDisplay from './components/FactDisplay';
-import './App.css';
+import DataDisplay from './components/DataDisplay';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const App = () => {
+function App() {
     return (
-        <Provider store={store}>
-            <div className="App">
-                <div className="container">
-                    <FactDisplay />
-                </div>
-            </div>
-        </Provider>
+        <div className="container mt-5">
+            <h1>Data Fetching with Redux-Thunk</h1>
+            <DataDisplay />
+        </div>
     );
-};
+}
 
 export default App;
